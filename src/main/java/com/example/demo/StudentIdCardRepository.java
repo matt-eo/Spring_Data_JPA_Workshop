@@ -1,2 +1,7 @@
-package com.example.demo;public interface StudentIdCardRepository {
+package com.example.demo;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface StudentIdCardRepository extends CrudRepository<StudentIdCard, Long> {
+
 }
