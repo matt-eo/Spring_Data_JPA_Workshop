@@ -20,8 +20,7 @@ public class Application {
     }
 
     @Bean
-    CommandLineRunner commandLineRunner(StudentRepository studentRepository,
-                                        StudentIdCardRepository studentIdCardRepository) {
+    CommandLineRunner commandLineRunner(StudentRepository studentRepository) {
         return args -> {
 
             /*Faker faker = new Faker();
@@ -39,13 +38,15 @@ public class Application {
 
             StudentIdCard studentIdCard = new StudentIdCard("910111213", student);
 
-            studentIdCardRepository.save(studentIdCard);*/
+            student.setStudentIdCard(studentIdCard);
 
-            studentRepository.findById(47L).
+            studentRepository.save(student);*/
+
+            /*studentRepository.findById(47L).
                     ifPresent(s -> {
                         List<Book> books = s.getBooks();
                         books.forEach(book -> System.out.println(book.getName()));
-                    });
+                    });*/
 
             /*generateFakerStudents(studentRepository);*/
             //sorting(studentRepository);
